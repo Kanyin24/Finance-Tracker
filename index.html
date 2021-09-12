@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="eng">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Personal Finance Tracker</title>
+    </head>
+
+    <body>
+        <!--Header-->
+        <header class="main-header">
+            <div class="title">
+                <h1>Personal Finance Tracker</h1>
+                <h10>Striving for financial freedom one step at a time</h10>
+            </div>
+            <!--menu-->
+            <div class="nav-bar">
+                <ul>
+                    <!--fix these-->
+                    <li><a href="#dashboard">Dashboard</a></li>
+                    <li><a href="#income">Income</a></li>
+                    <li><a href="#expenses">Expenses</a></li>
+                </ul>
+            </div>
+        </header>
+        <!--End Header-->
+
+        <!--main calculated values from all inputs-->
+        <!--Dashboard Section-->
+        <section id="dashboard">
+            <h1 id='dash-title'>Dashboard</h1>
+            <div class="values">
+                <div class="balance">
+                    <h2>Your Balance:</h2>
+                    <h2 id="balance-value">$0</h2>
+                </div>
+                <div id="section-for-values">
+                    <div class="income">
+                        <h2 id="income-value">Income: <div id='addmoney' style="color: green">$0</div></h2>
+                        <!--might need to change^^-->
+                    </div>
+                    <div class="outcome">
+                        <h2 class="outcome-value">Outcome: <div id='submoney' style="color: red">$0</div></h2>
+                    </div>
+                    <!-- <div id="pie-chart">
+                        <h3>Add dynamic pie chart here</h3>
+                    </div> -->
+                </div>
+            </div>
+        </section>
+        <!--End Dashboard Section-->
+        
+        <!--Income Section-->
+        <section id="income">
+            <h1>Income</h1>
+            <h2 class="history">History</h2>
+            <ul id="income-list" class="list">
+                <!-- <li id='0' class="income">
+                    <div class="entry">Salary: $8000</div>
+                    <div id="edit"></div>
+                    <div id="delete"></div>
+                </li> -->
+            </ul>
+            <!--Add empty space here to later add history of transactions-->
+            <!--<h2 class="transaction">Add A New Transaction</h2>-->
+            <form id="form"> <!--form-income-->
+                <div class="form-control">
+                    <label for="text" class="lbltext">Text</label>
+                    <input type="text" id="income-text" placeholder="Enter text..." />
+                </div>
+                <div class="form-control2">
+                    <label for="amount">Amount</label>
+                    <input type="number" id="income-amount" min="0" placeholder="Enter amount..."/> <!--min="0"-->
+                </div>
+                <button id="btn-income">Add Transaction</button>
+            </form>
+        </section>
+        <!--End Income Section-->
+
+        <!--Expenses Section-->
+        <section id="expenses">
+            <h1>Expenses</h1>
+            <h2 class="history">History</h2>
+            <ul id="expenses-list" class="list">
+                <!-- <li id='0' class="income">
+                    <div class="entry">Salary: $8000</div>
+                    <div id="edit"></div>
+                    <div id="delete"></div>
+                </li> -->
+            </ul>
+            <!--Add empty space here to later add history of transactions-->
+            <!--<h2 class="transaction">Add A New Transaction</h2>-->
+            <form id="form"> <!--form-expenses-->
+                <div class="form-control">
+                    <label for="text">Title</label>
+                    <input type="text" id="expenses-text" placeholder="Enter title..." />
+                </div>
+                <div class="form-control">
+                    <label for="amount">Amount</label>
+                    <input type="number" id="expenses-amount" max="0" placeholder="Enter amount..."/> <!--max="0"-->
+                </div>
+                <div class="lastsection">
+                    <button id="btn-expenses">Add Transaction</button>
+                </div>
+            </form>
+        </section>
+        <!--End Expenses Section-->
+
+        <script src="script.js"></script>
+    </body>
+</html>
